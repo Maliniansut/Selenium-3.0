@@ -1,0 +1,1 @@
+{"uuid":"5310a439-da02-43dc-beae-b3f1633574d3","name":"OpeningNewWindow.setup","children":["920df8b8-78be-47b2-8926-3f34e1b6b8a0"],"description":"","befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1757330758878,"stop":1757330768654}],"afters":[],"start":1757330758878,"stop":1757330768654}

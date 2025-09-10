@@ -3,6 +3,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -39,8 +40,20 @@ public class OpeningNewWindow {
             //Second page will open and then it would see the page source and then new window.
             if (driver.getPageSource().contains("New Window")){
                 System.out.println("Test Case Passed");
+
+                //Matching the Title After Switching
+                String expectedTitle = "New Window";
+                String actualTitle = driver.getTitle();
+                System.out.println("Title of new window: " + actualTitle);
+
+                Assert.assertEquals(actualTitle, expectedTitle, "Title does not match!");
+                System.out.println("Test Passed: Title is correct.");
+
+                driver.close();
             }
         }
+        driver.switchTo().window(mainWindowHandle);
+        Thread.sleep(2000);
 
     }
 }
